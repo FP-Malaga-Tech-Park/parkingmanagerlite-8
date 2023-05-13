@@ -32,6 +32,7 @@
     <h1 id="user-form-title" class="title is-1">Crear nuevo usuario</h1>
     <div class="column is-half is-offset-one-quarter">
     <form
+      id="create-user-form"
       th:action="@{/newUser}"
       th:object="${userDao}"
       action="#"
@@ -95,7 +96,7 @@
         </div>
       </div>
       <div class="field">
-        <label class="label">Rol</label>
+        <label id="select-rol" class="label">Rol</label>
         <div class="control">
       <select id="user-create-field-role"th:field="*{role}" class="select">
         <option
